@@ -19,6 +19,7 @@ class LoginController extends Controller
      */
     public function __invoke(LoginRequest $request): UserResource
     {
+
         $input = $request->validated();
 
         if (!Auth::attempt($input)) {

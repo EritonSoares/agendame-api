@@ -19,7 +19,7 @@ class LoginController extends Controller
      */
     public function __invoke(LoginRequest $request): UserResource
     {
-
+        //sleep(2);
         $input = $request->validated();
 
         if (!Auth::attempt($input)) {
